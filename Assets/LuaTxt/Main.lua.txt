@@ -1,0 +1,16 @@
+-- 初始化Lua环境
+require("InitClass")
+print("Lua脚本准备就绪")
+
+-- 加载AB包的道具数据
+require("ItemData")
+-- 初始化玩家数据
+require("PlayerData")
+PlayerData:Init()
+
+Canvas = GameObject.Find("Canvas").transform
+require("BasePanel")
+require("MainPanel")
+require("BagPanel")
+require("ItemGrid")
+MainPanel:ShowMe()
